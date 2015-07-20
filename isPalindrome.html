@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script type="text/javascript">
+		function pal() {
+			var pal = $("#pal").val();
+			var isP = isPalindrome(pal);
+			alert(isP);
+		}
+
+		function isPalindrome(pal) {
+			var len = pal.length;
+			for(i = 0; i < (len/2) ; i++){
+				if(pal.charAt(i) != pal.charAt(len - i - 1)){
+				    return false;
+				}
+			}
+		return true;
+		}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="pal"></input>
+		<button onclick="pal()">Submit</button>
+	</body>
+</html>
